@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Тамерлан Жомартов — создание современных сайтов для бизнеса в США."
+  >
+
+  <title>Тамерлан Жомартов — Создание сайтов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --green: #16a34a;
+      --green-dark: #087f3d;
+      --green-light: #22c55e;
+      --green-soft: #e9f8ef;
+
+      --black: #0c1610;
+      --dark: #17231b;
+
+      --white: #ffffff;
+      --off-white: #f7faf8;
+
+      --gray-100: #e7ece9;
+      --gray-300: #c6d0ca;
+      --gray-500: #6b7770;
+      --gray-700: #354039;
+
+      --border: #dce5df;
+
+      --font: "Inter", sans-serif;
+      --pixel: "Press Start 2P", monospace;
+
+      --shadow-sm: 0 4px 15px rgba(13, 35, 20, .06);
+      --shadow: 0 20px 60px rgba(13, 35, 20, .10);
+      --shadow-green: 0 20px 50px rgba(22, 163, 74, .16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+
+      color: var(--black);
+      background: var(--white);
+
+      font-family: var(--font);
+      line-height: 1.6;
+    }
+
+    ::selection {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       ШАПКА
+    ========================== */
+
+    header {
+      position: fixed;
+      z-index: 1000;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(12, 22, 16, .07);
+    }
+
+    .nav {
+      height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: -.4px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--white);
+      background: var(--green);
+
+      font-family: var(--pixel);
+      font-size: 8px;
+
+      box-shadow: 4px 4px 0 var(--green-dark);
+    }
+
+    .logo-name span {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--gray-500);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-cta {
+      padding: 11px 17px;
+
+      color: var(--white) !important;
+      background: var(--green);
+
+      border: 1px solid var(--green);
+
+      box-shadow: 4px 4px 0 var(--green-dark);
+
+      transition:
+        color .2s ease,
+        background .2s ease;
+    }
+
+    .nav-cta:hover {
+      color: var(--white) !important;
+      background: var(--green-light);
+    }
+
+    .mobile-menu {
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid var(--border);
+
+      color: var(--green);
+      background: var(--white);
+
+      cursor: pointer;
+    }
+
+    .mobile-menu svg {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+
+      min-height: 850px;
+
+      padding: 155px 0 100px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(34, 197, 94, .12),
+          transparent 30%
+        ),
+        linear-gradient(
+          180deg,
+          #f8fcf9 0%,
+          #ffffff 100%
+        );
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(22, 163, 74, .035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(22, 163, 74, .035) 1px,
+          transparent 1px
+        );
+
+      background-size: 28px 28px;
+
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns: 1.08fr .92fr;
+
+      align-items: center;
+
+      gap: 75px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 24px;
+
+      color: var(--green);
+
+      font-family: var(--pixel);
+      font-size: 8px;
+      line-height: 1.7;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 8px;
+      height: 8px;
+
+      background: var(--green);
+
+      box-shadow: 4px 4px 0 var(--green-dark);
+    }
+
+    .hero h1 {
+      max-width: 720px;
+
+      font-size: clamp(48px, 6vw, 78px);
+
+      line-height: .98;
+
+      letter-spacing: -4px;
+
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+      text-underline-offset: 8px;
+    }
+
+    .hero-description {
+      max-width: 610px;
+
+      margin-top: 28px;
+
+      color: var(--gray-500);
+
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .hero-description strong {
+      color: var(--black);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 34px;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      padding: 0 22px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      border: 1px solid transparent;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+    }
+
+    .btn svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--green);
+
+      box-shadow: 5px 5px 0 var(--green-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+    }
+
+    .btn-secondary {
+      color: var(--black);
+      background: var(--white);
+
+      border-color: var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      transform: none !important;
+    }
+
+    .btn-secondary:hover {
+      color: var(--green);
+
+      border-color: var(--green);
+
+      transform: none !important;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 24px;
+
+      margin-top: 42px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--gray-500);
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .meta-item svg {
+      width: 16px;
+      height: 16px;
+
+      color: var(--green);
+    }
+
+
+    /* =========================
+       ВИЗИТКА
+    ========================== */
+
+    .card-stage {
+      position: relative;
+
+      min-height: 480px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-glow {
+      position: absolute;
+
+      width: 360px;
+      height: 360px;
+
+      border-radius: 50%;
+
+      background: rgba(34, 197, 94, .12);
+
+      filter: blur(75px);
+    }
+
+    .business-card {
+      position: relative;
+      z-index: 2;
+
+      width: min(100%, 450px);
+
+      aspect-ratio: 1.75 / 1;
+
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #f2f8f4
+        );
+
+      border: 2px solid var(--green);
+
+      box-shadow:
+        12px 12px 0 var(--green-dark),
+        0 35px 80px rgba(13, 35, 20, .15);
+
+      transform: rotate(3deg);
+
+      transition: transform .4s ease;
+    }
+
+    .business-card:hover {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .business-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 9px;
+
+      border: 1px dashed rgba(22, 163, 74, .28);
+
+      pointer-events: none;
+    }
+
+    .card-corner {
+      position: absolute;
+
+      width: 17px;
+      height: 17px;
+
+      z-index: 3;
+
+      background: var(--green);
+    }
+
+    .cc1 {
+      top: 0;
+      left: 0;
+    }
+
+    .cc2 {
+      top: 0;
+      right: 0;
+    }
+
+    .cc3 {
+      bottom: 0;
+      left: 0;
+    }
+
+    .cc4 {
+      bottom: 0;
+      right: 0;
+    }
+
+    .card-brand {
+      position: relative;
+      z-index: 4;
+
+      color: var(--green);
+
+      font-family: var(--pixel);
+      font-size: 8px;
+    }
+
+    .card-name {
+      position: relative;
+      z-index: 4;
+
+      margin-top: 24px;
+
+      color: var(--black);
+
+      font-family: var(--pixel);
+
+      font-size: clamp(15px, 2vw, 20px);
+
+      line-height: 1.6;
+
+      text-shadow:
+        3px 3px 0 rgba(22, 163, 74, .14);
+    }
+
+    .card-role {
+      position: relative;
+      z-index: 4;
+
+      margin-top: 7px;
+
+      color: var(--green-dark);
+
+      font-family: var(--pixel);
+
+      font-size: 6px;
+
+      line-height: 1.7;
+    }
+
+    .card-bottom {
+      position: relative;
+      z-index: 4;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .card-contacts {
+      display: flex;
+      flex-direction: column;
+
+      gap: 7px;
+    }
+
+    .card-contact {
+      display: flex;
+      align-items: center;
+
+      gap: 7px;
+
+      color: var(--gray-700);
+
+      font-family: var(--pixel);
+
+      font-size: 5.5px;
+
+      transition: color .2s ease;
+    }
+
+    .card-contact:hover {
+      color: var(--green);
+    }
+
+    .card-contact svg {
+      width: 13px;
+      height: 13px;
+
+      fill: currentColor;
+    }
+
+    .mini-qr {
+      width: 60px;
+      height: 60px;
+
+      display: grid;
+      place-items: center;
+
+      border: 4px solid var(--green);
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--black) 50%,
+          transparent 50%
+        ),
+        linear-gradient(
+          var(--black) 50%,
+          transparent 50%
+        );
+
+      background-size: 8px 8px;
+
+      color: var(--green);
+
+      font-family: var(--pixel);
+
+      font-size: 5px;
+    }
+
+    .mini-qr span {
+      padding: 5px;
+
+      color: var(--green);
+
+      background: var(--white);
+    }
+
+
+    /* =========================
+       ОБЩИЕ СЕКЦИИ
+    ========================== */
+
+    section {
+      position: relative;
+
+      padding: 120px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      margin-bottom: 15px;
+
+      color: var(--green);
+
+      font-family: var(--pixel);
+
+      font-size: 8px;
+
+      line-height: 1.7;
+    }
+
+    .section-heading h2 {
+      color: var(--black);
+
+      font-size: clamp(36px, 4vw, 54px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2.5px;
+    }
+
+    .section-heading p {
+      margin-top: 18px;
+
+      color: var(--gray-500);
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       ДЛЯ КОГО
+    ========================== */
+
+    .business-section {
+      background: var(--off-white);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .business-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .business-pill {
+      padding: 13px 17px;
+
+      color: var(--gray-700);
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      box-shadow: var(--shadow-sm);
+
+      transition:
+        color .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+    .business-pill:hover {
+      color: var(--white);
+
+      background: var(--green);
+
+      border-color: var(--green);
+    }
+
+
+    /* =========================
+       КАК МЫ РАБОТАЕМ
+    ========================== */
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .process-item {
+      position: relative;
+
+      padding: 30px;
+
+      border-top: 2px solid var(--green);
+    }
+
+    .process-item::before {
+      content: "";
+
+      position: absolute;
+
+      top: -6px;
+      left: 0;
+
+      width: 10px;
+      height: 10px;
+
+      background: var(--green);
+
+      box-shadow: 4px 4px 0 var(--green-dark);
+    }
+
+    .process-number {
+      color: var(--green);
+
+      font-family: var(--pixel);
+
+      font-size: 8px;
+    }
+
+    .process-item h3 {
+      margin-top: 25px;
+
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .process-item p {
+      margin-top: 10px;
+
+      color: var(--gray-500);
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       ЦЕНЫ
+    ========================== */
+
+    .pricing-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .price-card {
+      position: relative;
+
+      padding: 35px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--green);
+
+      box-shadow: var(--shadow-green);
+    }
+
+    .popular {
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      padding: 8px 12px;
+
+      color: var(--white);
+
+      background: var(--green);
+
+      font-family: var(--pixel);
+
+      font-size: 6px;
+    }
+
+    .price-card h3 {
+      font-size: 20px;
+    }
+
+    .price {
+      margin: 20px 0 7px;
+
+      color: var(--black);
+
+      font-size: 46px;
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+      font-weight: 900;
+    }
+
+    .price span {
+      color: var(--green);
+
+      font-size: 25px;
+    }
+
+    .price-description {
+      min-height: 45px;
+
+      color: var(--gray-500);
+
+      font-size: 13px;
+    }
+
+    .price-list {
+      list-style: none;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin: 28px 0;
+    }
+
+    .price-list li {
+      display: flex;
+      align-items: flex-start;
+
+      gap: 9px;
+
+      color: var(--gray-700);
+
+      font-size: 13px;
+    }
+
+    .price-list svg {
+      flex-shrink: 0;
+
+      width: 16px;
+      height: 16px;
+
+      color: var(--green);
+    }
+
+    .price-button {
+      width: 100%;
+    }
+
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding: 100px 0;
+    }
+
+    .cta-box {
+      position: relative;
+
+      padding: 75px 60px;
+
+      overflow: hidden;
+
+      background: var(--green);
+
+      color: var(--white);
+
+      box-shadow:
+        10px 10px 0 var(--green-dark);
+    }
+
+    .cta-box::before {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      right: -70px;
+      top: -90px;
+
+      border: 1px solid rgba(255,255,255,.2);
+
+      transform: rotate(45deg);
+    }
+
+    .cta-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 140px;
+      height: 140px;
+
+      right: 130px;
+      bottom: -100px;
+
+      border: 1px solid rgba(255,255,255,.14);
+
+      transform: rotate(45deg);
+    }
+
+    .cta-label {
+      position: relative;
+      z-index: 2;
+
+      color: rgba(255,255,255,.8);
+
+      font-family: var(--pixel);
+
+      font-size: 8px;
+    }
+
+    .cta-box h2 {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+
+      margin-top: 20px;
+
+      font-size: clamp(38px, 5vw, 66px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+    .cta-box p {
+      position: relative;
+      z-index: 2;
+
+      max-width: 620px;
+
+      margin-top: 20px;
+
+      color: rgba(255,255,255,.86);
+
+      font-size: 16px;
+    }
+
+    .cta-box .btn {
+      position: relative;
+      z-index: 2;
+
+      margin-top: 30px;
+
+      color: var(--black);
+
+      background: var(--white);
+
+      border: 1px solid var(--white);
+
+      box-shadow: 5px 5px 0 var(--green-dark);
+    }
+
+    .cta-box .btn:hover {
+      color: var(--green);
+
+      background: #f5fff8;
+    }
+
+
+    /* =========================
+       КОНТАКТЫ
+    ========================== */
+
+    .contact-section {
+      padding-top: 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 0;
+
+      max-width: 720px;
+    }
+
+    .contact-title {
+      color: var(--black);
+
+      font-size: clamp(38px, 4vw, 56px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+    }
+
+    .contact-title span {
+      color: var(--green);
+    }
+
+    .contact-description {
+      margin-top: 20px;
+
+      color: var(--gray-500);
+
+      font-size: 15px;
+
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      padding: 15px 17px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      transition: border-color .2s ease;
+    }
+
+    .contact-link:hover {
+      border-color: var(--green);
+    }
+
+    .contact-link-icon {
+      width: 35px;
+      height: 35px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--green);
+
+      background: var(--green-soft);
+
+      border: 1px solid rgba(22, 163, 74, .2);
+    }
+
+    .contact-link-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .contact-link-text small {
+      display: block;
+
+      margin-bottom: 2px;
+
+      color: var(--gray-500);
+
+      font-family: var(--pixel);
+
+      font-size: 6px;
+    }
+
+    .contact-link-text strong {
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 100px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      min-height: 100px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .footer-copy {
+      color: var(--gray-500);
+
+      font-size: 12px;
+    }
+
+    .footer-copy span {
+      color: var(--green);
+    }
+
+    .footer-code {
+      color: var(--green);
+
+      font-family: var(--pixel);
+
+      font-size: 6px;
+    }
+
+
+    /* =========================
+       АНИМАЦИЯ ПОЯВЛЕНИЯ
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================
+       ПЛАНШЕТ
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .card-stage {
+        min-height: auto;
+
+        padding: 20px 0;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================
+       МОБИЛЬНЫЕ
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .nav-links {
+        position: fixed;
+
+        top: 68px;
+
+        left: 14px;
+        right: 14px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px;
+
+        background: rgba(255,255,255,.97);
+
+        border: 1px solid var(--border);
+
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .mobile-menu {
+        display: grid;
+
+        place-items: center;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding: 115px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 13vw, 60px);
+
+        letter-spacing: -2.8px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-meta {
+        gap: 15px;
+      }
+
+      .business-card {
+        padding: 22px;
+
+        transform: none;
+      }
+
+      .business-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-name {
+        font-size: 13px;
+      }
+
+      .card-role {
+        font-size: 5px;
+      }
+
+      .card-contact {
+        font-size: 4.7px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .section-heading h2 {
+        letter-spacing: -1.8px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 70px 0;
+      }
+
+      .cta-box {
+        padding: 50px 25px;
+      }
+
+      .cta-box h2 {
+        letter-spacing: -2px;
+      }
+
+      .footer-inner {
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+    }
+
+
+    /* =========================
+       УМЕНЬШЕНИЕ АНИМАЦИЙ
+    ========================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       ШАПКА
+  ========================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#top" class="logo">
+
+        <span class="logo-mark">
+          &lt;/&gt;
+        </span>
+
+        <span class="logo-name">
+          TAMERLAN<span>.DEV</span>
+        </span>
+
+      </a>
+
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#pricing">
+          Цены
+        </a>
+
+        <a href="#contact" class="nav-cta">
+          Заказать сайт
+        </a>
+
+      </nav>
+
+
+      <button
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M4 6h16"/>
+          <path d="M4 12h16"/>
+          <path d="M4 18h16"/>
+        </svg>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main id="top">
+
+
+    <!-- =========================
+         ГЛАВНЫЙ ЭКРАН
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            ВЕБ-ДИЗАЙН И РАЗРАБОТКА
+          </div>
+
+
+          <h1>
+            Создаю сайты,
+            которые помогают
+            <span>бизнесу расти.</span>
+          </h1>
+
+
+          <p class="hero-description">
+            Современные, быстрые и профессиональные сайты
+            для <strong>малого бизнеса и предпринимателей в США.</strong>
+            Без сложностей и лишней бюрократии — только сайт,
+            созданный специально под ваш бизнес.
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+            >
+
+              Заказать сайт
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14"/>
+                <path d="m13 6 6 6-6 6"/>
+              </svg>
+
+            </a>
+
+          </div>
+
+
+          <div class="hero-meta">
+
+            <div class="meta-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+
+              Работаю по США
+
+            </div>
+
+
+            <div class="meta-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 7v5l3 2"/>
+                <circle cx="12" cy="12" r="9"/>
+              </svg>
+
+              Быстрый запуск
+
+            </div>
+
+
+            <div class="meta-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12l4 4L19 6"/>
+              </svg>
+
+              Адаптивный дизайн
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             ВИЗИТКА
+        ========================== -->
+
+        <div class="card-stage reveal">
+
+          <div class="card-glow"></div>
+
+
+          <article class="business-card">
+
+            <span class="card-corner cc1"></span>
+            <span class="card-corner cc2"></span>
+            <span class="card-corner cc3"></span>
+            <span class="card-corner cc4"></span>
+
+
+            <div>
+
+              <div class="card-brand">
+                &lt;/&gt; DIGITAL CREATOR
+              </div>
+
+
+              <div class="card-name">
+                TAMERLAN<br>
+                ZHOMARTOV
+              </div>
+
+
+              <div class="card-role">
+                ВЕБ-РАЗРАБОТЧИК<br>
+                DIGITAL DESIGNER
+              </div>
+
+            </div>
+
+
+            <div class="card-bottom">
+
+              <div class="card-contacts">
+
+                <a
+                  href="tel:+15512444536"
+                  class="card-contact"
+                >
+
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 2h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 4-4 4C9 22 2 15 2 6c0-2 2-4 4-4Z"/>
+                  </svg>
+
+                  +1 (551) 244-4536
+
+                </a>
+
+
+                <a
+                  href="mailto:tamerlan.zhomartov@gmail.com"
+                  class="card-contact"
+                >
+
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2 5h20v14H2zM4 7l8 6 8-6"/>
+                  </svg>
+
+                  tamerlan.zhomartov@gmail.com
+
+                </a>
+
+              </div>
+
+
+              <div class="mini-qr">
+                <span>SCAN</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ДЛЯ КОГО
+    ========================== -->
+
+    <section class="business-section">
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            // ДЛЯ_ВАШЕГО_БИЗНЕСА
+          </div>
+
+          <h2>
+            Сайты для бизнеса
+            по всей Америке.
+          </h2>
+
+          <p>
+            Подходит для локальных услуг, подрядчиков,
+            предпринимателей и небольших компаний,
+            которым нужно профессиональное присутствие в интернете.
+          </p>
+
+        </div>
+
+
+        <div class="business-list reveal">
+
+          <span class="business-pill">
+            Хендимен
+          </span>
+
+          <span class="business-pill">
+            Строительство
+          </span>
+
+          <span class="business-pill">
+            Клининговые услуги
+          </span>
+
+          <span class="business-pill">
+            Кровельные работы
+          </span>
+
+          <span class="business-pill">
+            Ландшафтный дизайн
+          </span>
+
+          <span class="business-pill">
+            Переезды
+          </span>
+
+          <span class="business-pill">
+            Автосервисы
+          </span>
+
+          <span class="business-pill">
+            Барбершопы
+          </span>
+
+          <span class="business-pill">
+            Салоны красоты
+          </span>
+
+          <span class="business-pill">
+            Рестораны
+          </span>
+
+          <span class="business-pill">
+            Недвижимость
+          </span>
+
+          <span class="business-pill">
+            Подрядчики
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ПРОЦЕСС
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            // КАК_ЭТО_РАБОТАЕТ
+          </div>
+
+          <h2>
+            Простой процесс.
+            Никакой головной боли.
+          </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <article class="process-item reveal">
+
+            <div class="process-number">
+              ШАГ 01
+            </div>
+
+            <h3>
+              Расскажите о бизнесе
+            </h3>
+
+            <p>
+              Отправьте информацию о вашей компании,
+              услугах, контактах и расскажите,
+              какой сайт вам нужен.
+            </p>
+
+          </article>
+
+
+          <article class="process-item reveal">
+
+            <div class="process-number">
+              ШАГ 02
+            </div>
+
+            <h3>
+              Я создаю дизайн
+            </h3>
+
+            <p>
+              Разрабатываю индивидуальный дизайн
+              с учётом вашего бизнеса,
+              клиентов и задач.
+            </p>
+
+          </article>
+
+
+          <article class="process-item reveal">
+
+            <div class="process-number">
+              ШАГ 03
+            </div>
+
+            <h3>
+              Вы проверяете
+            </h3>
+
+            <p>
+              Показываю готовый вариант.
+              Вы говорите, что изменить или улучшить.
+            </p>
+
+          </article>
+
+
+          <article class="process-item reveal">
+
+            <div class="process-number">
+              ШАГ 04
+            </div>
+
+            <h3>
+              Запускаем сайт
+            </h3>
+
+            <p>
+              После согласования сайт размещается
+              в интернете и становится доступен вашим клиентам.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ЦЕНЫ
+    ========================== -->
+
+    <section id="pricing">
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            // ЦЕНЫ.EXE
+          </div>
+
+          <h2>
+            Понятные цены.
+            Понятный результат.
+          </h2>
+
+          <p>
+            Стартовая стоимость популярных вариантов сайтов.
+            Для нестандартных проектов стоимость обсуждается отдельно.
+          </p>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+
+          <article class="price-card reveal">
+
+            <h3>
+              Старт
+            </h3>
+
+            <div class="price">
+              $299
+            </div>
+
+            <p class="price-description">
+              Для небольшого бизнеса, которому нужен простой сайт.
+            </p>
+
+            <ul class="price-list">
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Одностраничный сайт
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Адаптация под телефон
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Контакты
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Размещение сайта
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-secondary price-button"
+            >
+              Заказать
+            </a>
+
+          </article>
+
+
+          <article class="price-card featured reveal">
+
+            <div class="popular">
+              ПОПУЛЯРНЫЙ
+            </div>
+
+            <h3>
+              Бизнес
+            </h3>
+
+            <div class="price">
+              $599
+            </div>
+
+            <p class="price-description">
+              Полноценный профессиональный сайт для развивающегося бизнеса.
+            </p>
+
+            <ul class="price-list">
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                До 5 страниц
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Индивидуальный дизайн
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Форма для клиентов
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                SEO-структура
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Запуск сайта
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-primary price-button"
+            >
+              Начать проект
+            </a>
+
+          </article>
+
+
+          <article class="price-card reveal">
+
+            <h3>
+              Премиум
+            </h3>
+
+            <div class="price">
+              $999<span>+</span>
+            </div>
+
+            <p class="price-description">
+              Индивидуальный сайт со сложными функциями и интеграциями.
+            </p>
+
+            <ul class="price-list">
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Индивидуальный сайт
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Продвинутые функции
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Запись и формы
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Интеграции
+              </li>
+
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l4 4L19 6"/>
+                </svg>
+                Поддержка
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-secondary price-button"
+            >
+              Обсудить проект
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+
+        <div class="cta-box reveal">
+
+          <div class="cta-label">
+            // ГОТОВЫ_НАЧАТЬ?
+          </div>
+
+
+          <h2>
+            Давайте создадим
+            ваш сайт.
+          </h2>
+
+
+          <p>
+            Расскажите о вашем бизнесе и о том,
+            какой сайт вам нужен.
+            Я помогу превратить вашу идею
+            в профессиональный сайт.
+          </p>
+
+
+          <a
+            href="#contact"
+            class="btn"
+          >
+
+            Заказать сайт
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14"/>
+              <path d="m13 6 6 6-6 6"/>
+            </svg>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         КОНТАКТЫ
+    ========================== -->
+
+    <section
+      id="contact"
+      class="contact-section"
+    >
+
+      <div class="container contact-grid">
+
+
+        <div class="reveal">
+
+          <div class="section-label">
+            // КОНТАКТЫ.EXE
+          </div>
+
+
+          <h2 class="contact-title">
+            Есть идея для
+            <span>сайта?</span>
+          </h2>
+
+
+          <p class="contact-description">
+            Расскажите о вашем бизнесе, какой сайт вам нужен
+            и какую задачу он должен решать.
+            Я свяжусь с вами и обсудим проект.
+          </p>
+
+
+          <div class="contact-links">
+
+
+            <a
+              href="tel:+15512444536"
+              class="contact-link"
+            >
+
+              <div class="contact-link-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 2h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 4-4 4C9 22 2 15 2 6c0-2 2-4 4-4Z"/>
+                </svg>
+
+              </div>
+
+
+              <div class="contact-link-text">
+
+                <small>
+                  ТЕЛЕФОН
+                </small>
+
+                <strong>
+                  +1 (551) 244-4536
+                </strong>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="mailto:tamerlan.zhomartov@gmail.com"
+              class="contact-link"
+            >
+
+              <div class="contact-link-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect
+                    x="2"
+                    y="5"
+                    width="20"
+                    height="14"
+                  />
+
+                  <path d="m3 7 9 6 9-6"/>
+                </svg>
+
+              </div>
+
+
+              <div class="contact-link-text">
+
+                <small>
+                  EMAIL
+                </small>
+
+                <strong>
+                  tamerlan.zhomartov@gmail.com
+                </strong>
+
+              </div>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-copy">
+
+        ©
+        <span id="year"></span>
+        Тамерлан Жомартов.
+        Все права защищены.
+
+      </div>
+
+
+      <div class="footer-code">
+
+        &lt;/&gt; HTML / CSS / JS
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================
+       МОБИЛЬНОЕ МЕНЮ
+    ========================== */
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    mobileMenu.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navLinks.classList.toggle("open");
+
+        mobileMenu.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+      }
+    );
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("open");
+
+            mobileMenu.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       ТЕКУЩИЙ ГОД
+    ========================== */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       ПОЯВЛЕНИЕ БЛОКОВ
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: .12
+        }
+      );
+
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
